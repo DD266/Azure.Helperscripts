@@ -21,9 +21,9 @@ function Get-AzureRMVMInfo {
     [cmdletbinding(DefaultParameterSetName = 'Name')]
     Param(        
         [Parameter(Mandatory = $true, ParameterSetName = 'Name')]
-        $VMName,
+        [string]$VMName,
         [Parameter(Mandatory = $true, ParameterSetName = 'Name')]
-        $ResourceGroupName,
+        [string]$ResourceGroupName,
         [Parameter(ValueFromPipeline, Mandatory = $true, ParameterSetName = 'Object')]
         $VM
     )
