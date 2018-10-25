@@ -1,7 +1,8 @@
-<#
+
+function Get-AzureRMVMInfo {
+    <#
     .SYNOPSIS 
-    Gets basic information on one or more Azure VMs.
-    
+    Gets basic information on one or more Azure VMs.    
     .DESCRIPTION
     Get CPU, memory and IP configuration with a simple cmdlet.
     Pipeline input accepts multiple vm objects.
@@ -16,8 +17,7 @@
     This command gets all VMs in the current subscription, then uses the output to surface all basic configuration on these VMs, sorted by Internal IP.
     .LINK
     https://github.com/martensnico/Azure.Helperscripts
-#>
-function Get-AzureRMVMInfo {
+    #>
     [cmdletbinding(DefaultParameterSetName = 'Name')]
     Param(        
         [Parameter(Mandatory = $true, ParameterSetName = 'Name')]
